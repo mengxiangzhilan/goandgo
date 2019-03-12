@@ -4,5 +4,6 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/Unknwon/com" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/gpmgo/gopm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/golang.org/x/crypto" vcs="Git" />
   </component>
 </project>
