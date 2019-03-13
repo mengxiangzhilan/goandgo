@@ -43,7 +43,9 @@ func savePEMKey(fileName string, key *rsa.PrivateKey) {
 	outFile, err := os.Create(fileName)
 	checkError(err)
 	var privateKey = &pem.Block{Type: "RSA PRIVATE KEY",
-		Bytes: x509.MarshalPKCS1PrivateKey(key)}
+		/**公钥基础架构（PKI）是一个公钥集合框架，它连同附加信息，如所有者名称和位置，以及
+		它们之间的联系提供了一些审批机制。*/
+		Bytes: x509.MarshalPKCS1PrivateKey(key)} //目前使用的pki是基于X.509证书的
 	pem.Encode(outFile, privateKey)
 	outFile.Close()
 }
